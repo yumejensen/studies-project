@@ -34,27 +34,23 @@
  * 2: VAR, LET, AND CONST
  * 
  * Before the ES6 update to JavaScript in 2015, var was the only variable keyword.
- * In the update, let and const keywords were added. Nowadays, most programmers prefer let and const.
+ * In the update, let and const keywords were added. Nowadays, most programmers prefer let and const because 
+ * of their specificity in re-assignment and re-declaration. 
  * 
  * Variables declared with var can be re-assigned and re-declared. Allowing for re-declaration can cause many problems.
- * 
  * var myName = "Yume";
  * myName = "Sol"; // myName is re-assigned
  * var myName = "Suzu"; //myName is re-declared
  * console.log(myName); => prints "Suzu"
  * 
- * Variables declared with let can be re-assigned but not re-declared. This means the value of let can change, but every
- * variable name is guaranteed to be unique.
- * 
+ * Variables declared with let can be re-assigned but not re-declared. 
  * let myAge = 24;
  * myAge = 25; // myAge is re-assigned
  * console.log(myAge); => prints 25
- * 
- * let myPet = "Maruko";
+ * let myPet = "Maruko"; 
  * let myPet = "Tama"; // Uncaught SyntaxError: Identifier 'myPet' has already been declared
  * 
  * Variables declared with const cannot be re-assigned or re-declared.
- * 
  * const myHomeTown = "New Orleans";
  * myHomeTown = "New York"; // Uncaught TypeError: Assignment to constant variable.
  * const myHomeTown = "Tokyo"; // Uncaught SyntaxError: Identifier 'myHomeTown' has already been declared
@@ -62,5 +58,11 @@
  * --------------------------------------------------------------------------------------------------------------------------
  * 3: HOISTING
  * 
+ * In addition, var, let, and const have different scopes and are thus hoisted differently. 
+ * Hoisting is a process that happens in the compiling phase of a code before it is executed. The interpreter
+ * moves (hoists) variables and functions to the top of their scope. 
+ * There are three scopes: global scope, function scope, and block scope.
+ * Variables declared with let and const can be block scoped, whereas var can only be global scoped or function scoped.
  * 
+ *
  */
