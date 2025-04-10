@@ -58,11 +58,15 @@
  * --------------------------------------------------------------------------------------------------------------------------
  * 3: HOISTING
  * 
- * In addition, var, let, and const have different scopes and are thus hoisted differently. 
  * Hoisting is a process that happens in the compiling phase of a code before it is executed. The interpreter
  * moves (hoists) variables and functions to the top of their scope. 
  * There are three scopes: global scope, function scope, and block scope.
- * Variables declared with let and const can be block scoped, whereas var can only be global scoped or function scoped.
+ * Variables with var can only be global or function scoped. With the ES6 update, let and const are able to be block scoped.
  * 
+ * Global scope: values can be accessed by everything in a program
+ * 
+ * Function scope: values can only be accessed within the function
+ * 
+ * Block scope: values can only be accessed within a code block { }
  *
  */
