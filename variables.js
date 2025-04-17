@@ -64,9 +64,8 @@
  * Variables with var can only be global or function scoped. With the ES6 update, let and const are able to be block scoped.
  * 
  * Global scope: values can be accessed by everything in a program
- * 
  * Function scope: values can only be accessed within the function
- * 
  * Block scope: values can only be accessed within a code block { }
  *
+ * 
  */
