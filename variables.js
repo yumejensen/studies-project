@@ -67,5 +67,7 @@
  * Function scope: values can only be accessed within the function
  * Block scope: values can only be accessed within a code block { }
  *
- * 
+ * Important notes:
+ * Function declarations and variable declarations are hoisted to the top of their scopes.
+ * Function expressions are not hoisted and variable definitions are not hoisted either.
  */
