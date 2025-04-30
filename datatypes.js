@@ -36,7 +36,9 @@
  * 
  * // BOOLEAN // 
  * Booleans are true and false. They are used in conditional testing, such as if statements. 
- * JavaScript converts values to booleans automatically in a boolean context by evaluating truthy and falsy.
+ * Most of the time, booleans do not need to be declared explicitly because JavaScript converts values 
+ * to booleans automatically in a boolean context by evaluating truthy and falsy.
+ * All values are inherently truthy except: false, 0, -0, "", null, undefined, NaN
  * 
  * // UNDEFINED //
  * No value, not initialized
