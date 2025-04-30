@@ -27,10 +27,16 @@
  * let c = BigInt(100000000000000000);
  * 
  * // STRING //
- * Strings are character data and are written with single or double quotes on the outside.
+ * Strings are character data and are written with single or double quotes on the outside. Quotes can exist inside
+ * a string if they are different.
+ * let string1 = "He is called 'Sam' not 'Sammy'";
+ * To avoid this problem altogether, the backslash can be used to escape certain characters.
+ * let string2 = "He is called \"Sam\" not \"Sammy\""; // prints  "He is called 'Sam' not 'Sammy'"
+ * The backslash is also used to escape apostraphes and backslashes.
  * 
  * // BOOLEAN // 
- * true or false
+ * Booleans are true and false. They are used in conditional testing, such as if statements. 
+ * JavaScript converts values to booleans automatically in a boolean context by evaluating truthy and falsy.
  * 
  * // UNDEFINED //
  * No value, not initialized
