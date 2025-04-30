@@ -66,8 +66,17 @@
  * Global scope: values can be accessed by everything in a program
  * Function scope: values can only be accessed within the function
  * Block scope: values can only be accessed within a code block { }
- *
+ * 
  * Important notes:
- * Function declarations and variable declarations are hoisted to the top of their scopes.
- * Function expressions are not hoisted and variable definitions are not hoisted either.
+ * Variable declarations (not definitions) are hoisted to the top of their scope.
+ * Function declarations and definitions are hoisted to the top of their scope.
+ * Function expressions are NOT hoisted.
+ * 
+ * printString(); // prints "this is function scoped"
+ * // why? the function is hoisted above the function call
+ * 
+ * function printString() {
+ *    let functionVar = "this is function scoped";
+ *    console.log(functionVar)
+ * };
  */
