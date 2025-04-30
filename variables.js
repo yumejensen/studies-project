@@ -16,19 +16,8 @@
  * Simply declaring a variable would be a keyword followed by the chosen name.
  * Assigning a value to a variable uses the assignment operator =.
  * Initialization is when a variable is declared and assigned on the same line.
- * 
- * var myName; // declaration
- * myName = "Yume"; // assignment
- * let myAge = 25; // initialization
- * const addTen = (num) => num + 10; // initialization
- * 
  * There is also a method of declaring variables called "destructuring syntax" which allows for values from
  * arrays or properties from objects to be unpacked into variables.
- * 
- * const [a, b, c] = [1, 2, 3]; // destructuring
- * // const a = 1, b = 2, c = 3
- * const {a, b, c} = obj; // destructuring
- * // const a = obj.a, b = obj.b, c = obj.c
  * 
  * --------------------------------------------------------------------------------------------------------------------------
  * 2: VAR, LET, AND CONST
@@ -37,23 +26,9 @@
  * In the update, let and const keywords were added. Nowadays, most programmers prefer let and const because 
  * of their specificity in re-assignment and re-declaration. 
  * 
- * Variables declared with var can be re-assigned and re-declared. Allowing for re-declaration can cause many problems.
- * var myName = "Yume";
- * myName = "Sol"; // myName is re-assigned
- * var myName = "Suzu"; //myName is re-declared
- * console.log(myName); => prints "Suzu"
- * 
+ * Variables declared with var can be re-assigned and re-declared. Allowing for re-declaration can cause many problems
  * Variables declared with let can be re-assigned but not re-declared. 
- * let myAge = 24;
- * myAge = 25; // myAge is re-assigned
- * console.log(myAge); => prints 25
- * let myPet = "Maruko"; 
- * let myPet = "Tama"; // Uncaught SyntaxError: Identifier 'myPet' has already been declared
- * 
  * Variables declared with const cannot be re-assigned or re-declared.
- * const myHomeTown = "New Orleans";
- * myHomeTown = "New York"; // Uncaught TypeError: Assignment to constant variable.
- * const myHomeTown = "Tokyo"; // Uncaught SyntaxError: Identifier 'myHomeTown' has already been declared
  * 
  * --------------------------------------------------------------------------------------------------------------------------
  * 3: HOISTING
@@ -71,12 +46,4 @@
  * Variable declarations (not definitions) are hoisted to the top of their scope.
  * Function declarations and definitions are hoisted to the top of their scope.
  * Function expressions are NOT hoisted.
- * 
- * printString(); // prints "this is function scoped"
- * // why? the function is hoisted above the function call
- * 
- * function printString() {
- *    let functionVar = "this is function scoped";
- *    console.log(functionVar)
- * };
  */
