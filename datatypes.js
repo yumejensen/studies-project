@@ -56,12 +56,14 @@
  */
 
 
-/** // NULL //
+/** 
+ * // NULL //
  * No value, intentionally nullified by a programmer
  */
 
 
-/** // NaN //
+/** 
+ * // NaN //
  * Not a number
  */
 
@@ -73,15 +75,18 @@
  * 
  * 
  
+
 /**
  * // OBJECT //
  * 
  */
 
+
 /**
  * // FUNCTION //
  * 
  */
+
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 3: INFINITY AND -INFINITY
@@ -99,3 +104,4 @@
  * 5: COPY BY VALUE VS COPY BY REFERENCE
  * 
  */
+
