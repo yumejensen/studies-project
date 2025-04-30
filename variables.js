@@ -1,6 +1,5 @@
 /**
  * VARIABLES:
- * 
  * --------------------------------------------------------------------------------------------------------------------------
  * 0: INTRO
  * 
@@ -47,3 +46,41 @@
  * Function declarations and definitions are hoisted to the top of their scope.
  * Function expressions are NOT hoisted.
  */
+
+
+// 1. DECLARATION AND ASSIGNMENT //
+
+var myName; // declaration
+myName = "Yume"; // assignment
+let myAge = 25; // initialization
+const addTen = (num) => num + 10; // initialization
+
+const [a, b, c] = [1, 2, 3]; // destructuring
+// const a = 1, b = 2, c = 3
+const {d, e, f} = obj; // destructuring
+// const d = obj.d, e = obj.e, f = obj.f
+
+
+// 2. VAR LET AND CONST //
+
+var myName = "Yume";
+var myName = "Suzu"; //myName is re-declared
+console.log(myName); // prints "Suzu"
+
+let myPet = "Maruko"; 
+//let myPet = "Tama"; // Uncaught SyntaxError: Identifier 'myPet' has already been declared
+
+const myHomeTown = "New Orleans";
+//myHomeTown = "New York"; // Uncaught TypeError: Assignment to constant variable.
+//const myHomeTown = "Tokyo"; // Uncaught SyntaxError: Identifier 'myHomeTown' has already been declared
+
+
+// 3. HOISTING //
+
+printString(); // prints "this is function scoped"
+// this works because the function is hoisted above the function call
+
+function printString() {
+  let functionVar = "this is function scoped";
+  console.log(functionVar)
+};
