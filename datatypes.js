@@ -26,8 +26,8 @@
  * Normal numbers lose accuracy after 15 digits.
  * BigInt are created by declaring with BigInt() or adding n to the end of an integer.
  */
-    let b = 100000000000000000n;
-    let c = BigInt(100000000000000000);
+    let g = 100000000000000000n;
+    let h = BigInt(100000000000000000);
 
 /** 
  * // STRING //
@@ -52,19 +52,22 @@
 
 /** 
  * // UNDEFINED //
- * No value, not initialized
+ * Undefined means a variable has been declared but not initialized.
  */
-
+    let newVar;
+    console.log(newVar) // prints undefined
 
 /** 
  * // NULL //
- * No value, intentionally nullified by a programmer
+ * Null is intentionally assigned to a value to mean it is an empty value.
  */
-
+    let newerVar = null;
+    console.log(newerVar); // prints null
 
 /** 
  * // NaN //
- * Not a number
+ * NaN stands for "not a number" and shows up when a mathematical equation can't return a valid number.
+ * NaN can be assigned with = Nan or = Number.NaN 
  */
 
 
