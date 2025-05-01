@@ -146,12 +146,47 @@
 /** --------------------------------------------------------------------------------------------------------------------------
  * 4: SIMPLE VS COMPLEX DATA TYPES
  * Simple/ primitive data types, which include: number, string, boolean, NaN, null, and undefined, are atomic and immutable.
- * They do not mutate or aggregate other values. Operations on simple data types return new simple values.
+ * They do not mutate or aggregate other values, and operations on simple data types return new simple values. Primitive 
+ * data is stored in the call stack and takes up a fixed amount of space. 
+ * 
+ * Complex data types include functions, arrays, and objects. Unlike primitive data types, 
+ * they are mutable and therefore are an indefinite size.
+ * Complex data is stored in the heap, which is used for dynamic memory allocation. Variables can only directly contain 
+ * primitive data, so a variable assigned to an object will be a *reference* to data stored in the heap. 
  */
+    // primitive datatypes - a and b assigned to a number
+    let a = 1; 
+    let b = 1; 
+    a === b; // returns true - 1 is equal to 1
 
+    // complex datatypes - aObj and bObj assigned to an empty object
+    let aObj = {};
+    let bObj = {};
+    aObj === bObj; // returns false - aObj and bObj are pointing to different *references* 
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 5: COPY BY VALUE VS COPY BY REFERENCE
- * 
+ * As stated earlier, operations on primitive data gets copied and returns new simple values. 
+ * This is called copy by value.
+ * Operations on complex data, however, change the data directly. Instead of copying and returning new values, 
+ * the operations will be performed on a *reference* that points to the object stored in the heap (with the same reference).
+ * This is called copy by reference.
  */
+    // copy by value
+    let j = 5; // j is given the value of 5
+    let k = j; // j = 5, so that means k = 5
+
+    j = 6; // j is reassigned to 6
+    console.log(k); // k = 5
+    // k was assigned to a COPY of j which was equal to 5 at the time 
+    // when j is reassigned to 6 it has no effect on k
+
+    //copy by reference
+    let foodArray = ['sushi', 'donuts', 'mochi', 'carrots'];
+    let foodArray2 = foodArray; // foodArray2 is a variable that points to the same array as foodArray
+
+    foodArray.push('sweet potato pancakes'); 
+    console.log(foodArray2); // prints ['sushi', 'donuts', 'mochi', 'carrots', 'sweet potato pancakes']
+    // both variables are a reference pointing to the same data in the heap
+    // when foodArray gets modified, foodArray2 is also modified
 
