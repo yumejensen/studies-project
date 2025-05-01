@@ -69,19 +69,25 @@
  * NaN stands for "not a number" and shows up when a mathematical equation can't return a valid number.
  * NaN can be assigned with = Nan or = Number.NaN 
  */
-
+    console.log(5 * "hello"); // prints NaN
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 2: COMPLEX DATA TYPES
  * 
  * // ARRAY //
- * 
- * 
- 
+ * Arrays are an ordered, 0-indexed list; they are accessed with bracket notation and a number index. 
+ * They can hold a mix of data types, including nested arrays or objects. 
+ * Arrays have a length property and related built in methods, such as the push method (adds onto the end of an array).
+ */
+    const family = ['Yume', 'Saeko', 'Kent', 'Isaac', 'Maruko'];
+    console.log(family[0]); // prints 'Yume'
+    family.push("Anzu");
+    console.log(family); // prints ['Yume', 'Saeko', 'Kent', 'Isaac', 'Maruko', 'Anzu'];
 
 /**
  * // OBJECT //
- * 
+ * Objects are used to store keyed collections. Unlike arrays, they do not have an order or a length.
+ * They are accessed with bracket or dot notation and key names (strings).
  */
 
 
@@ -98,7 +104,7 @@
 
 
 /** --------------------------------------------------------------------------------------------------------------------------
- * 4: SIMPLE VS COMPLEC DATA TYPES
+ * 4: SIMPLE VS COMPLEX DATA TYPES
  * 
  */
 
