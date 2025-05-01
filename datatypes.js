@@ -86,14 +86,25 @@
 
 /**
  * // OBJECT //
- * Objects are used to store keyed collections. Unlike arrays, they do not have an order or a length.
- * They are accessed with bracket or dot notation and key names (strings).
+ * Objects are a collection that stores key value pairs. Unlike arrays, they do not have an order or a length.
+ * They are accessed with bracket or dot notation and key names (strings). Some built in object methods include
+ * Object.keys,which returns an array of all the object keys. 
  */
+    const person = {
+        name: "Yume",
+        age: 25,
+        occupation: ["Server", "Student", "Tutor"],
+        hobbies: ['Art', 'Capoeira']
+    };
 
+    console.log(person['occupation']) // prints ["Server", "Student", "Tutor"]
+    person.height = "5'5"; // adds height: "5'5" to person object 
+    Object.keys(person); // returns ['name', 'age', 'occupation', 'hobbies', 'height'];
 
 /**
  * // FUNCTION //
- * 
+ * Functions take in an input, perform an action, and produce an output. Function declarations have the function
+ * keyword, a function name, and parameters that are enclosed in parenthesis.
  */
 
 
