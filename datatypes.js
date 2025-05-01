@@ -103,25 +103,50 @@
 
 /**
  * // FUNCTION //
- * Functions take in an input, perform an action, and produce an output. Function declarations have the function
- * keyword, a function name, parameters enclosed in parenthesis, and a code block with a set of instructions inside.
+ * Functions are a key building block of JavaScript that essentially take in an input, perform an action, 
+ * and produce an output. Function declarations have the function keyword, a function name, 
+ * parameters enclosed in parenthesis, and a code block with a set of instructions inside.
+ * A function expression is a function assigned to a variable. In an expression, the function can be anonymous (have no name).
+ * When a function is called, it executes with a specified input.
+ * A function can call itself inside its code block, which is a recursive function.
  */
-
+    // function declaration - add 10 to an input number
     function add10(number) {
         return number + 10;
     };
+    add10(5); // function call returns 15
+    
+    // function expression - square an input number
+    const squared = function(number) { // anonymous function
+        return number * number;
+    };
+    squared(2); // function call returns 4
 
-    add10(5); // returns 15;
+    // recursive function - find the sum of an array of numbers
+    const sum = function(array, output = 0) {
+        if (array.length === 0){
+            return output;
+        }
+        output += array[0];
+        return sum (array.slice(1), output); // function calls itself
+    };
+    sum([1, 2, 3, 4, 5]); // function call returns 15
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 3: INFINITY AND -INFINITY
- * 
+ * Infinity is a variable in the global scope that represents positive infinity. 
+ * The value is a numeric value that is greater than any other number.
+ * Similarly, -Infinity is a global property that represents negative infinity, which
+ * is a value lesser than any other number.
  */
-
+    console.log(Infinity); // Infinity
+    console.log(1 / Infinity); // 0
+    console.log(Math.log(0)); // -Infinity
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 4: SIMPLE VS COMPLEX DATA TYPES
- * 
+ * Simple/ primitive data types, which include: number, string, boolean, NaN, null, and undefined, are atomic and immutable.
+ * They do not mutate or aggregate other values. Operations on simple data types return new simple values.
  */
 
 
