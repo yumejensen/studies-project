@@ -178,7 +178,7 @@
 
     j = 6; // j is reassigned to 6
     console.log(k); // k = 5
-    // k was assigned to a COPY of j which was equal to 5 at the time 
+    // k was assigned to a COPY of j which was 5 at the time 
     // when j is reassigned to 6 it has no effect on k
 
     //copy by reference
