@@ -104,9 +104,14 @@
 /**
  * // FUNCTION //
  * Functions take in an input, perform an action, and produce an output. Function declarations have the function
- * keyword, a function name, and parameters that are enclosed in parenthesis.
+ * keyword, a function name, parameters enclosed in parenthesis, and a code block with a set of instructions inside.
  */
 
+    function add10(number) {
+        return number + 10;
+    };
+
+    add10(5); // returns 15;
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 3: INFINITY AND -INFINITY
