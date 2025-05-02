@@ -2,7 +2,7 @@
  * OPERATORS:
  * --------------------------------------------------------------------------------------------------------------------------
  * 0: INTRO
- * Simply put, operators act on data (operands). They are classified by what they do and how many operands they require. 
+ * Operators act on data (operands). They are classified by what they do and how many operands they require. 
  * They can perform actions such as arithmetic operations, compare two values, or assign data to a variable.
  * Unary operators work with one value, binary with two, and ternary with three.
  * 
