@@ -73,6 +73,7 @@
     console.log(typeof string1); // prints "string"
     console.log(!true); // prints false, bang operator flips logic
     console.log(!!null); // prints false, double bang forces a value to a boolean
+    
 /** --------------------------------------------------------------------------------------------------------------------------
  * 6: TERNARY OPERATORS
  * Ternary operators take in three operands. It evaluates a condition and depending on whether the
