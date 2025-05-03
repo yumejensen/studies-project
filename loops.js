@@ -16,6 +16,17 @@
  *  }
  * The loop will continue as long as the condition is true and stop executing when the condition becomes false.
  */
+    let i = 0; // initialize the start value
+    while (i <= 3){ // condition
+        console.log(`i is equal to ${i}`);
+        i++; // update
+    }
+    /* this code prints:
+    "i is equal to 0"
+    "i is equal to 1"
+    "i is equal to 2"
+    "i is equal to 3"
+    */
 
 /**
  * A for loop has the following syntax:
@@ -25,13 +36,43 @@
  * The loop will initialize a counter, have a condition, and an update expression. Once the condition becomes false, 
  * the loop will end.
  */
+    let sampleArray = ['hello', 'this', 'is', 'an', 'array'];
+
+    for (let i = 0; i < sampleArray.length; i++){
+        console.log(sampleArray[i])
+    }
+    /* this code prints:
+    "hello"
+    "this"
+    "is"
+    "an"
+    "array"
+    */
 
 /**
  * A for-in loop has the following syntax:
  *  for (variable in object){
  *     statement 
  *  }
+ * For in loops are designed to iterate through objects, which do not have numbered indexes like
+ * strings and arrays do.
  */
+    const sampleObject = {
+        name: "Yume",
+        age: 25,
+        occupation: ["Server", "Student", "Tutor"],
+        hobbies: ['Art', 'Capoeira']
+    };
+
+    for (let key in sampleObject){
+        console.log(key);
+    }
+    /* this code prints:
+    "name"
+    "age"
+    "occupation"
+    "hobbies"
+    */
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 2: HOW TO LOOP WITH A SPECIFIC INCREMENT OR FORWARDS & BACKWARDS
