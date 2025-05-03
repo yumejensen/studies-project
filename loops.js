@@ -21,7 +21,7 @@
         console.log(`i is equal to ${i}`);
         i++; // update
     }
-    /* this code prints:
+    /* 
     "i is equal to 0"
     "i is equal to 1"
     "i is equal to 2"
@@ -41,7 +41,7 @@
     for (let i = 0; i < sampleArray.length; i++){
         console.log(sampleArray[i])
     }
-    /* this code prints:
+    /* 
     "hello"
     "this"
     "is"
@@ -65,9 +65,9 @@
     };
 
     for (let key in sampleObject){
-        console.log(key);
+        console.log(key);               
     }
-    /* this code prints:
+    /* 
     "name"
     "age"
     "occupation"
