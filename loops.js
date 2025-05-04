@@ -79,42 +79,97 @@
  * A loop does not need to iterate through every single item in an array, object, string, etc. rather,
  * it can simply search and find one specific element or increment by 2,3,4, etc.
  */
-let sampleArray2 = [1, 2, 3, 4, 5, 6];
+    let sampleArray2 = [1, 2, 3, 4, 5, 6];
 
-// In this loop, the counter starts at the 1 index and the update expression goes up by 2. 
-for (let i = 1; i < sampleArray2.length; i += 2){ // update increments by 2
-    console.log(sampleArray2[i]);
-}
-// 2, 4, 6
-
-// In this loop, the loop iterates through all of the numbers but checks if the number is even before logging it.
-for (let i = 0; i < sampleArray2.length; i++){ // update increments by 1
-    if (sampleArray2[i] % 2 === 0){ // conditional
+    // In this loop, the counter starts at the 1 index and the update expression goes up by 2. 
+    for (let i = 1; i < sampleArray2.length; i += 2){ // update increments by 2
         console.log(sampleArray2[i]);
     }
-}
-// 2, 4, 6
+    // 2, 4, 6
 
-//In this loop, the counter starts at the last index and the update decrements to loop through the array backwards.
-for (let i = sampleArray2.length; i >= 0; i--){ // update decrements by 1
-    console.log(sampleArray2[i]);
-}
-// 6, 5, 4, 3, 2, 1
-
-//In this loop, I have an if else statement depending on if number 6 is in the array or not.
-for (let i = 0; i < sampleArray2.length; i++){
-    if (sampleArray2[i] === 6){
-        console.log('This array contains number 6');
-    } else {
-        console.log('This array does not contain number 6');
+    // In this loop, the loop iterates through all of the numbers but checks if the number is even before logging it.
+    for (let i = 0; i < sampleArray2.length; i++){ // update increments by 1
+        if (sampleArray2[i] % 2 === 0){ // conditional
+            console.log(sampleArray2[i]);
+        }
     }
-}
-// "This array contains number 6"
+    // 2, 4, 6
 
+    //In this loop, the counter starts at the last index and the update decrements to loop through the array backwards.
+    for (let i = sampleArray2.length-1; i >= 0; i--){ // update decrements by 1
+        console.log(sampleArray2[i]);
+    }
+    // 6, 5, 4, 3, 2, 1
+
+    //In this loop, I have an if else statement depending on if number 6 is in the array or not.
+    for (let i = 0; i < sampleArray2.length; i++){
+        if (sampleArray2[i] === 6){ // conditional
+            console.log('This array contains number 6');
+        } else { // default
+            console.log('This array does not contain number 6');
+        }
+    }
+    // "This array contains number 6"
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 3: LOOPING OVER ARRAYS
+ * There are several loops that can effectively iterate over arrays such as:
+ * for loop, for-in loop, for-of loop, while loop, do-while loop
+ * 
+ * The examples below will simply iterate over the catNames array and print each name to the console.
  */
+    let catNames = ['Tama', 'Vikus', 'Abbie', 'Cowboy', 'Nyangi'];
+
+// FOR LOOP //
+    // forwards
+    for (let i = 0; i < catNames.length; i++){
+        console.log(catNames[i]);
+    }
+    // backwards 
+    // initial value is the last element, stop condition is index 0, and the update expression decrements
+    for (let i = catNames.length-1; i >= 0; i--){
+        console.log(catNames[i]);
+    }
+// FOR IN LOOP //
+    // this loop gives a key to access all elements with - in this example we use i
+    // cannot change directions like a for loop 
+    for (i in catNames){
+        console.log(catNames[i]);
+    }
+// FOR OF LOOP //
+    // this loop is similar to for in, except that we access the element itself not the key
+    // also cannot change directions
+    for (catName of catNames){
+        console.log(catName);
+    }
+// WHILE LOOP //
+    // forwards
+    let j = 0;
+    while (j < catNames.length) {
+        console.log(catNames[j]);
+        j++;
+    }
+    // backwards
+    // initialize start at last element, loop ends at 0 index, update decrements
+    let k = catNames.length - 1;
+    while (k >= 0){
+        console.log(catNames[k]);
+        k--;
+    }
+// DO WHILE LOOP //
+    // forwards
+    let l = 0; //  initialize value
+    do {
+        console.log(catNames[l]); 
+        l++; 
+    } while (l < catNames.length);
+    // backwards
+    // initialize start at the last element, decrement the update expression, and make the stop condition index 0
+    let m = catNames.length - 1;
+    do {
+        console.log(catNames[m]);
+        m--;
+    } while (m >= 0);
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 4: LOOPING OVER OBJECTS
