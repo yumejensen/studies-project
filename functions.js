@@ -119,8 +119,22 @@ console.log(question); // ReferenceError: question is not defined
 /** --------------------------------------------------------------------------------------------------------------------------
  * 7: CLOSURES
  * A function forms a closure around the environment it was defined. 
- * Closures allow for functions to have local variables that can only be accessed in the function scope. 
- * What is inside the closure CAN still access variables in the parent scope.
- * This is similar to the rules of scoping, but closures have the added ability of allowing a function to 
- * access variables from its outer functions and global variables AFTER it has finished executing. 
+ * A closure allows a function to access to variables from its outer function and global variables
+ * after the outer function has finished executing. The function essentially "remembers" its environment.
+ * This allows closures to retain references to variables that would be lost from executing the 
+ * outer function.
+ * Closures also make their own local/ private variables that are only available in the function scope.
  */
+
+    function outerFunc() {
+        let outerVar = "This is the outer function";
+        // return inner function
+        return function innerFunc() {
+        //inner func can access outer function variable
+            console.log(outerVar);
+        }
+    }
+    const closure = outerFunc(); // assign varible closure to the result of invoking outerFunc
+    closure(); // prints "This is the outer function"
+
+    
