@@ -127,14 +127,17 @@ console.log(question); // ReferenceError: question is not defined
  */
 
     function outerFunc() {
+        // local variable outerVar
         let outerVar = "This is the outer function";
-        // return inner function
+
+        // returns innerFunc
         return function innerFunc() {
-        //inner func can access outer function variable
+            //inner func can access outer function variable
             console.log(outerVar);
         }
     }
-    const closure = outerFunc(); // assign varible closure to the result of invoking outerFunc
+    const closure = outerFunc(); // varible closure stores the result of invoking outerFunc (which is innerFunc)
+                                 // innerFunc logs outerVar - innerFunc can access outerVar after outerFunc has finished
+                                 // executing because of closure. It remembers the environment it was created in.
+                                 
     closure(); // prints "This is the outer function"
-
-    
