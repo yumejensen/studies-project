@@ -173,4 +173,29 @@
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 4: LOOPING OVER OBJECTS
+ * Objects are not an ordered list like arrays are, which means there are less options for looping.
+ * The for-in loop accesses the keys in an object. Bracket notation can be used to access the values.
+ * There are also the built in methods Object.keys(), Object.values(), and Object.entries() that return all the object's
+ * keys, values, or key value pairs as an array. Using one of these methods first can make iterating easier.
  */
+    let catNamesObj = {
+        cat1: 'Tama',
+        cat2: 'Vikus',
+        cat3: 'Abbie',
+        cat4: 'Cowboy',
+        cat5: 'Nyangi'
+    }
+
+// FOR IN LOOP //
+    // printing the keys in catNames
+    for (let key in catNamesObj){
+        console.log(key); // object's keys
+    }
+    // "cat1", "cat2", "cat3", "cat4", "cat5"
+
+    // printing the values in catNames
+    for (let key in catNamesObj){
+        console.log(catNamesObj[key]); // object's values
+    }
+    // 'Tama', 'Vikus', 'Abbie', 'Cowboy', 'Nyangi'
+
