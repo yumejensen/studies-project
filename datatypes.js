@@ -103,8 +103,8 @@
 
 /**
  * // FUNCTION //
- * Functions are a key building block of JavaScript that essentially take in an input, perform an action, 
- * and produce an output. Function declarations have the function keyword, a function name, 
+ * Functions can be thought of as logic data that executes a block of code according to a list of instructions. 
+ * Function declarations have the function keyword, a function name, 
  * parameters enclosed in parenthesis, and a code block with a set of instructions inside.
  * A function expression is a function assigned to a variable. In an expression, the function can be anonymous (have no name).
  * When a function is called, it executes with a specified input.
