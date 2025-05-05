@@ -68,7 +68,7 @@
  * function returns (defined inside the code block). 
  * In order to return something, the code block must have the return keyword. If using console.log() as the action
  * inside a function, it technically does not *return* anything it just prints something to the console.
- * Functions can be created without inputs, however, and do not require an output. When a function does not hit a 
+ * Functions can be created without inputs, however, and also do not require an output. When a function does not hit a 
  * return statement, it implicitly returns "undefined"
  */
 
@@ -86,7 +86,7 @@
 
 // This function searches inside an array and only returns if the input matches. If there is no match, there will
 // be no output. 
-    const listOfNames = ['Sam', 'Cady', 'Austin', 'Cameron', 'Mercedes'];
+    const listOfNames = ['Sam', 'Cady', 'Austin', 'Carter', 'Mercedes'];
 
     function findName(inputName){
         for (let i = 0; i < listOfNames.length; i++)
@@ -94,12 +94,33 @@
             return listOfNames[i];
         }
     }
+    // 'Fiona' is not in listOfNames, so the function never hits the return
     console.log(findName('Fiona')); // undefined
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 6: FUNCTION SCOPE
+ * Scope refers to where and what variables and constants are available. The types of scopes are global and local.
+ * Local scopes can also be called function scope or block scope.  
+ * Functions create their own local scope in the function body. The function scope is able to access variables/ constants
+ * in the global scope, but the global scope cannot access variables in the function scope. 
  */
+const greeting = 'Good morning';
+
+function printGreeting(inputName){
+    const question = "how are you?"
+    // function scope can access global scope greeting
+    return `${greeting} ${inputName}, ${question}`;
+}
+printGreeting("Sam"); // returns "Good morning Sam, how are you?"
+
+console.log(question); // ReferenceError: question is not defined 
+// question is a function scoped variable that is not available to the global scope
 
 /** --------------------------------------------------------------------------------------------------------------------------
  * 7: CLOSURES
+ * A function forms a closure around the environment it was defined. 
+ * Closures allow for functions to have local variables that can only be accessed in the function scope. 
+ * What is inside the closure CAN still access variables in the parent scope.
+ * This is similar to the rules of scoping, but closures have the added ability of allowing a function to 
+ * access variables from its outer functions and global variables AFTER it has finished executing. 
  */
